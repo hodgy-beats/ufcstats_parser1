@@ -16,6 +16,7 @@ def parse(html):
         cols = row.find_all('td')
 
         projects.append({
+            'profile': cols[0].a['href'],
             'firstname': cols[0].a.text,
             'secondname': cols[1].a.text,
             'nickname': cols[2].a.text,
